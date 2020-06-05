@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+    <head>
+        <meta charset ="utf-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>criar um ponto de coleta</title>
+        
+        <!--fontes-->
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Ubuntu:wght@700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles/main.css">
+        <link rel="stylesheet" href="styles/creat-point.css">
+        <link rel="stylesheet" href="styles/responsive.css">
+       
+       
+    </head>
+    <body>
+        <div id="page-creat-point">
+           
+                <header>
+                    <img src="extras-aula-1/icones/logo.svg" alt="Logo">
+                    <a href="#"><span></span>voltar para home</a>
+                </header>
+            <form>
+                <h1>cadastro do ponto de coleta</h1>
+                
+                <fieldset>
+                    <legend>
+                        <h2>dados da entidade</h2>
+                    </legend>
+                    <div class="field">
+                        <label for="name">nome da entidade</label>
+                        <input type="text" name="name" required>
+                    </div>
+                    <div class="field-group">
+                        <div class="field">
+                            <label for="adress">endereço</label>
+                            <input type="text" name="adress" required>
+                            
+                        </div>
+                        <div class="field">
+                            <label for="number">numero/complemento</label>
+                            <input type="text" name="number" required>
+                        </div>
+                        
+                    </div>
+                    
+                     
+                </fieldset>
+                <div class ="field-group">
+                    <div class="field"> 
+                        <label for ="state">
+                        <select name ="uf" required>
+                            <option value="" >selecione o estado</option>
+                            <option value="1" >selecione o estado</option>
+                        </select>
+                        </label>
+                    </div>
+                    <div class="field">
+                        <label for ="city">
+                        <select name ="city" disabled required>
+                            <option value="" >selecione a cidade</option>
+                        </select>
+                        </label>
+                    </div>
+                    <input type="hidden" name="state">
+                </div>
+             
+                
+                <fieldset>
+                    <legend><h2>itens de coleta</h2></legend>
+                    <div class="itens-grid">
+                        <input name = items type="hidden">
+                        <li data-id ="1" >
+                            <img src="extras-aula-1/icones/lampadas.svg" alt="lampadas">
+                            <span>lampadas</span>
+                        </li>
+                        <li data-id ="2">
+                            <img src="extras-aula-1/icones/baterias.svg" alt="pilhas e baterias">
+                            <span>pilhas e baterias</span>
+                        </li>
+                        <li data-id ="3">
+                            <img src="extras-aula-1/icones/papeis-papelao.svg" alt="papeis e papelão">
+                            <span>papeis e papelão</span>
+                        </li>
+                        <li data-id ="4">
+                            <img src="extras-aula-1/icones/oleo.svg" alt="oleos">
+                            <span>Oleo de cozinha</span>
+                        </li>
+                        <li data-id ="5">
+                            <img src="extras-aula-1/icones/eletronicos.svg" alt="residuos">
+                            <span>residuos eletornicos</span>
+                        </li>
+                        <li data-id ="6">
+                            <img src="extras-aula-1/icones/organicos.svg" alt="organicos">
+                            <span>residuos organicos</span>
+                        </li>
+                    </div>
+                </fieldset>
+                
+                
+                <button type ="submit">cadastrar pontos de coletas</button>
+            </form>
+        </div>
+        
+        <script src="scripts/creat.js"></script>
+    </body>
+</html>
